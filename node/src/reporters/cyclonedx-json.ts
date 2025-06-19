@@ -95,7 +95,7 @@ function configureCycloneDXJSONLogger(logger: Logger, writer: Writer, config: Lo
             timestamp: finalResults.start,
             tools: [
               {
-                vendor: 'RetireJS',
+                vendor: 'JSentinel',
                 name: 'retire.js',
                 version: retire.version,
               },

@@ -2,7 +2,7 @@
 
 To use the development version:
 
-1. Clone the repo `git clone https://github.com/RetireJS/retire.js`
+1. Clone the repo `git clone https://github.com/your-org/jsentinel`
 2. Run build_chrome.sh from the root of the repo
 3. Open [chrome://extensions/](chrome://extensions/)
 4. Check "Developer mode"

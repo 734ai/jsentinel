@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "retire.js",
-  "description": "Scanning website for vulnerable js libraries. Icon by studiomx",
+  "name": "JSentinel",
+  "description": "Advanced JavaScript security analysis for detecting vulnerable libraries. Icon by studiomx",
   "version": "2.2.4",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "author": "Erlend Oftedal",
+  "author": "Muzan Sano",
 
   "permissions": ["webRequest", "tabs", "offscreen", "webNavigation"],
   "host_permissions": ["<all_urls>"],
@@ -16,7 +16,7 @@
     "default_icon": {
       "48": "icons/icon48.png"
     },
-    "default_title": "retire.js",
+    "default_title": "JSentinel",
     "default_popup": "popup.html"
   },
   "content_security_policy": {

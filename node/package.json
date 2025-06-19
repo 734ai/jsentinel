@@ -1,17 +1,17 @@
 {
-  "author": "Erlend Oftedal <erlend@oftedal.no>",
-  "name": "retire",
-  "description": "Retire is a tool for detecting use of vulnerable libraries",
-  "version": "5.2.7",
+  "author": "Muzan Sano",
+  "name": "jsentinel",
+  "description": "JSentinel is an advanced tool for detecting use of vulnerable JavaScript libraries",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RetireJS/retire.js.git"
+    "url": "https://github.com/734ai/jsentinel.git"
   },
   "bin": {
-    "retire": "./lib/cli.js"
+    "jsentinel": "./lib/cli.js"
   },
-  "main": "./lib/retire.js",
+  "main": "./lib/jsentinel.js",
   "dependencies": {
     "ansi-colors": "^4.1.1",
     "astronomical": "^2.0.1",
@@ -35,7 +35,7 @@
     "prettier": "^3.1.0",
     "ts-jest": "^29.3.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.0"
   },
   "scripts": {
     "test": "rm   -rf spec/out && mkdir -p spec/out && jest --ci --runInBand",

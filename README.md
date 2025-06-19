@@ -1,36 +1,36 @@
-# Retire.js
+# JSentinel
 
-#### What you require you must also retire
+#### Advanced JavaScript Security Analysis
 
-There is a plethora of JavaScript libraries for use on the Web and in Node.JS apps out there. This greatly simplifies development,but we need to stay up-to-date on security fixes. "Using Components with Known Vulnerabilities" is now a part of the [OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities) list of security risks and insecure libraries can pose a huge risk to your Web app. The goal of Retire.js is to help you detect the use of JS-library versions with known vulnerabilities.
+There is a plethora of JavaScript libraries for use on the Web and in Node.JS apps out there. This greatly simplifies development, but we need to stay up-to-date on security fixes. "Using Components with Known Vulnerabilities" is now a part of the [OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities) list of security risks and insecure libraries can pose a huge risk to your Web app. The goal of JSentinel is to help you detect the use of JS-library versions with known vulnerabilities using advanced analysis techniques.
 
-Retire.js can be used in many ways:
+JSentinel can be used in many ways:
 
-1. [As command line scanner](https://github.com/RetireJS/retire.js/tree/master/node)
-2. [As a grunt plugin](https://github.com/bekk/grunt-retire)
+1. [As command line scanner](https://github.com/734ai/jsentinel/tree/master/node)
+2. [As a grunt plugin](https://github.com/734ai/grunt-jsentinel)
 3. [As a gulp task](#user-content-gulp-task)
-4. [As a Chrome extension](https://github.com/RetireJS/retire.js/tree/master/chrome) - **Not** officially available in the Chrome web store
-5. [As a Firefox extension](https://github.com/RetireJS/retire.js/tree/master/firefox) - **Deprecated** Let us know if you want to maintain and undeprecate it.
-6. [As a Burp Extension](https://github.com/h3xstream/burp-retire-js) or [OWASP ZAP Add-on](https://www.zaproxy.org/docs/desktop/addons/retire.js/)
+4. [As a Chrome extension](https://github.com/734ai/jsentinel/tree/master/chrome)
+5. [As a Firefox extension](https://github.com/734ai/jsentinel/tree/master/firefox)
+6. [As a security tool plugin](#integrations)
 
 ## Command line scanner
 
 Scan a web app or node app for use of vulnerable JavaScript libraries and/or Node.JS modules. If you haven't already, you need to [install node/npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) first. In the source code folder of the application folder run:
 
 ```
-$ npm install -g retire
-$ retire
+$ npm install -g jsentinel
+$ jsentinel
 ```
 
 ## SBOM generation
 
-retire.js can generate SBOMs in the CycloneDX-format:
+JSentinel can generate SBOMs in the CycloneDX-format:
 
 ```
-$ retire --outputformat cyclonedx
+$ jsentinel --outputformat cyclonedx
 ```
 
-By default retire.js will exit with code 13 if it finds vulnerabilities. This can be overridden with `--exitwith 0`.
+By default JSentinel will exit with code 13 if it finds vulnerabilities. This can be overridden with `--exitwith 0`.
 
 ## Grunt plugin
 

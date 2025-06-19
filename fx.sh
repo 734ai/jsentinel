@@ -5,8 +5,8 @@
 # ------------------------------------------------------------------------------
 
 ADD_ON_DIR=./firefox
-NODE_RETIRE_JS_FILE=./node/lib/retire.js
-FX_RETIRE_JS_FILE=$ADD_ON_DIR/lib/retire.js
+NODE_JSENTINEL_FILE=./node/lib/jsentinel.js
+FX_JSENTINEL_FILE=$ADD_ON_DIR/lib/jsentinel.js
 FX_PROFILE_DIR=""
 FX_PATH=""
 target=$1
@@ -37,7 +37,7 @@ function howToUse {
   echo "  -p PROFILEDIR"
   echo "     Use an existing profile located in PROFILEDIR. If the PROFILEDIR does not exist it will be automatically created."
   echo "     Example:"
-  echo "     ./fx.sh run -p ~/firefox-retire-profile"
+  echo "     ./fx.sh run -p ~/firefox-jsentinel-profile"
   echo
   echo "  -release"
   echo "     Creates a release. Does not append a timestamp to the filename."
@@ -49,13 +49,13 @@ function howToUse {
 # create the firfox/lib/retire.js file based on the node/lib/retire.js
 # ------------------------------------------------------------------------------
 
-function createRetireJs {
-  if (grep -Fxq "var exports = exports || {};" $NODE_RETIRE_JS_FILE); then
-    cat $NODE_RETIRE_JS_FILE > $FX_RETIRE_JS_FILE
-    sed -i.bak s/"var exports = exports || {};"/"if (typeof exports != \"object\") exports = {};"/g $FX_RETIRE_JS_FILE
-    rm $FX_RETIRE_JS_FILE."bak"
+function createJSentinel {
+  if (grep -Fxq "var exports = exports || {};" $NODE_JSENTINEL_FILE); then
+    cat $NODE_JSENTINEL_FILE > $FX_JSENTINEL_FILE
+    sed -i.bak s/"var exports = exports || {};"/"if (typeof exports != \"object\") exports = {};"/g $FX_JSENTINEL_FILE
+    rm $FX_JSENTINEL_FILE."bak"
   else
-    echo "Exit. Could not create $FX_RETIRE_JS_FILE"
+    echo "Exit. Could not create $FX_JSENTINEL_FILE"
     exit 1
   fi
 }
@@ -136,7 +136,7 @@ function build {
 # prepearing
 # ------------------------------------------------------------------------------
 
-createRetireJs
+createJSentinel
 
 cd $ADD_ON_DIR
 case "$target" in

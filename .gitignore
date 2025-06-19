@@ -11,9 +11,9 @@ dist/
 build/
 spec/out/
 *.tsbuildinfo
-chrome/js/retire.js
-firefox/js/retire.js
-firefox/lib/retire.js
+chrome/js/jsentinel.js
+firefox/js/jsentinel.js
+firefox/lib/jsentinel.js
 chrome/extension/js/generated/
 *.xpi
 
@@ -30,8 +30,20 @@ tmp/
 # Testing and Coverage
 coverage/
 .nyc_output/
+test-results/
+junit.xml
 
-# Cache
-.npm/
-.cache/
-.eslintcache
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Production
+*.log
+*.pid
+.DS_Store
+Thumbs.db
+
+# Package lock files (keep package-lock.json)
+yarn.lock
+pnpm-lock.yaml

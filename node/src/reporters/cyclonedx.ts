@@ -77,7 +77,7 @@ function configureCycloneDXLogger(logger: Logger, writer: Writer, config: Logger
     <timestamp>${finalResults.start.toISOString()}</timestamp>
     <tools>
         <tool>
-            <vendor>RetireJS</vendor>
+            <vendor>JSentinel</vendor>
             <name>retire.js</name>
             <version>${retire.version}</version>
         </tool>

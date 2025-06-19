@@ -1,9 +1,9 @@
 {
-  "name": "retirejs",
-  "fullName": "Retire.js for Firefox",
+  "name": "jsentinel",
+  "fullName": "JSentinel for Firefox",
   "id": "jid1-WraQ74BxTHiaUw@jetpack.org",
-  "description": "Scanning website for vulernable js libraries. Icon by studiomx",
-  "author": "Erlend Oftedal",
+  "description": "Advanced JavaScript security analysis for detecting vulnerable libraries. Icon by studiomx",
+  "author": "Muzan Sano",
   "license": "Apache License, Version 2.0",
   "version": "0.1.2a1",
   "icon": "data/icons/add-on-icon.png",
