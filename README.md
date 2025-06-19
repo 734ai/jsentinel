@@ -4,6 +4,16 @@
 
 There is a plethora of JavaScript libraries for use on the Web and in Node.JS apps out there. This greatly simplifies development, but we need to stay up-to-date on security fixes. "Using Components with Known Vulnerabilities" is now a part of the [OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities) list of security risks and insecure libraries can pose a huge risk to your Web app. The goal of JSentinel is to help you detect the use of JS-library versions with known vulnerabilities using advanced analysis techniques.
 
+## Support the Project
+
+If you find JSentinel useful, please consider supporting our research and development efforts:
+
+[![PayPal Donation](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/research.unit734@proton.me)
+
+Your support helps us maintain and improve JSentinel's security analysis capabilities.
+
+## Features
+
 JSentinel can be used in many ways:
 
 1. [As command line scanner](https://github.com/734ai/jsentinel/tree/master/node)

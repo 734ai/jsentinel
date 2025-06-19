@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/734ai/jsentinel.git"
   },
+  "funding": {
+    "type": "paypal",
+    "url": "https://paypal.me/research.unit734@proton.me"
+  },
   "scripts": {
     "build": "npm run build:node && npm run build:chrome && npm run build:firefox",
     "build:node": "cd node && npm install && npm run build",
