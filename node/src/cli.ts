@@ -18,10 +18,10 @@ import * as z from 'zod';
 
 const events = new EventEmitter();
 let failProcess = false;
-const defaultIgnoreFiles = ['.retireignore', '.retireignore.json'];
+const defaultIgnoreFiles = ['.jsentinelignore', '.jsentinelignore.json'];
 
 if (process.argv.includes('--node') || process.argv.includes('-n')) {
-  console.log('Error: retire.js no longer supports scanning node packages. Use npm audit instead.');
+  console.log('Error: JSentinel no longer supports scanning node packages. Use npm audit instead.');
   process.exit(1);
 }
 
@@ -38,7 +38,7 @@ const prg = program
     '--jsrepo <path|url>',
     "Local or internal version of repo. Can be multiple comma separated. Default: 'central')",
   )
-  .option('--cachedir <path>', 'Path to use for local cache instead of /tmp/.retire-cache')
+  .option('--cachedir <path>', 'Path to use for local cache instead of /tmp/.jsentinel-cache')
   .option('--proxy <url>', 'Proxy url (http://some.host:8080)')
   .option(
     '--outputformat <format>',
@@ -106,7 +106,7 @@ const config: Options = {
   },
   colorwarn,
   nocache: prg.nocache ? true : false,
-  cachedir: prg.cachedir ?? path.resolve(os.tmpdir(), '.retire-cache/'),
+  cachedir: prg.cachedir ?? path.resolve(os.tmpdir(), '.jsentinel-cache/'),
   log: log,
   severity: severity,
   exitwith: prg.exitwith ?? 13,

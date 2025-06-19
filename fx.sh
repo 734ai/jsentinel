@@ -46,7 +46,7 @@ function howToUse {
 }
 
 # ------------------------------------------------------------------------------
-# create the firfox/lib/retire.js file based on the node/lib/retire.js
+# create the firfox/lib/jsentinel.js file based on the node/lib/jsentinel.js
 # ------------------------------------------------------------------------------
 
 function createJSentinel {

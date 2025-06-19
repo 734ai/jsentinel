@@ -7,7 +7,7 @@ let repo;
 let backdoorData;
 let repoFuncs;
 
-const retire = retirechrome.retire;
+const sentinel = jsentinelchrome.sentinel;
 
 let vulnerable = {};
 const events = new Emitter();

@@ -34,11 +34,11 @@ By default JSentinel will exit with code 13 if it finds vulnerabilities. This ca
 
 ## Grunt plugin
 
-A [Grunt task for running Retire.js](https://github.com/bekk/grunt-retire) as part of your application's build routine, or some other automated workflow.
+A [Grunt task for running JSentinel](https://github.com/734ai/grunt-jsentinel) as part of your application's build routine, or some other automated workflow.
 
 ## Gulp task
 
-An example of a Gulp task which can be used in your gulpfile to watch and scan your project files automatically. You can modify the watch patterns and (optional) Retire.js options as you like.
+An example of a Gulp task which can be used in your gulpfile to watch and scan your project files automatically. You can modify the watch patterns and (optional) JSentinel options as you like.
 
 ```javascript
 const c = require("ansi-colors");
@@ -48,15 +48,15 @@ var beeper = require("beeper");
 var log = require("fancy-log");
 var spawn = require("child_process").spawn;
 
-gulp.task("retire:watch", ["retire"], function (done) {
+gulp.task("jsentinel:watch", ["jsentinel"], function (done) {
   // Watch all javascript files and package.json
-  gulp.watch(["js/**/*.js", "package.json"], ["retire"]);
+  gulp.watch(["js/**/*.js", "package.json"], ["jsentinel"]);
 });
 
-gulp.task("retire", function () {
-  // Spawn Retire.js as a child process
+gulp.task("jsentinel", function () {
+  // Spawn JSentinel as a child process
   // You can optionally add option parameters to the second argument (array)
-  var child = spawn("retire", [], { cwd: process.cwd() });
+  var child = spawn("jsentinel", [], { cwd: process.cwd() });
 
   child.stdout.setEncoding("utf8");
   child.stdout.on("data", function (data) {

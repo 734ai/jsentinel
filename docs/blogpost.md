@@ -1,18 +1,18 @@
 There is a plethora of JavaScript libraries for use on the web and in node.js apps out there. They greatly simplify the development process, but also require us to stay updated on new library versions and security fixes. "Using Components with Known Vulnerabilities" is now a part of the 
-[OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities) and insecure libraries can pose a huge risk for your webapp. The goal of Retire.js is to help you detect use of libraries with 
+[OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities) and insecure libraries can pose a huge risk for your webapp. The goal of JSentinel is to help you detect use of libraries with 
 known vulnerabilities.
 
-Retire.js has three parts:
+JSentinel has three parts:
 
-1. [A command line scanner](https://github.com/RetireJS/retire.js/tree/master/node)
-2. [A Chrome extension](https://github.com/RetireJS/retire.js/tree/master/chrome)
-3. [A grunt plugin](https://github.com/bekk/grunt-retire)
+1. [A command line scanner](https://github.com/734ai/jsentinel/tree/master/node)
+2. [A Chrome extension](https://github.com/734ai/jsentinel/tree/master/chrome)
+3. [A grunt plugin](https://github.com/734ai/grunt-jsentinel)
 
 Command line scanner
 --------------------
 Scan a web app or node app for use of vulnerable JavaScript libraries and/or node modules.
 ```
-Usage: retire [options]
+Usage: jsentinel [options]
 
 Options:
 
