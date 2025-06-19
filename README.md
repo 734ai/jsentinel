@@ -87,12 +87,6 @@ Scans visited sites for references to insecure libraries, and puts warnings in t
 
 ## Burp Extension and OWASP ZAP Add-on
 
-[@h3xstream](https://github.com/h3xstream) has adapted Retire.js as a [plugin](https://github.com/h3xstream/burp-retire-js) for the penetration testing tools [Burp](https://portswigger.net/burp/) and [OWASP ZAP](https://www.zaproxy.org).
+[@h3xstream](https://github.com/h3xstream) has adapted JSentinel as a [plugin](https://github.com/h3xstream/burp-jsentinel) for the penetration testing tools [Burp](https://portswigger.net/burp/) and [OWASP ZAP](https://www.zaproxy.org).
 
-The [OWASP ZAP](https://www.zaproxy.org) team officially supports a Retire.js add-on which is available via the ZAP Marketplace and is included by default in the ZAP weekly releases: https://www.zaproxy.org/docs/desktop/addons/retire.js/
-
-## Donate
-
-<a href="https://www.paypal.me/eoftedal"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"></a>
-
-Donations will be used to fund the maintainance of the tool and vulnerability repo.
+The [OWASP ZAP](https://www.zaproxy.org) team officially supports a JSentinel add-on which is available via the ZAP Marketplace and is included by default in the ZAP weekly releases: https://www.zaproxy.org/docs/desktop/addons/jsentinel/
